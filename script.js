@@ -26,37 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (times.length > windowSize) {
             times = times.slice(-windowSize); 
             values = values.slice(-windowSize); 
-        }
-
-        const update = {
-            x: [times],
-            y: [values]
-        };
-
-        const layout = {
-            plot_bgcolor: '#000',
-            paper_bgcolor: '#000',
-            margin: { t: 10 },
-            xaxis: {
-                title: {
-                    text: 'Time',
-                    font: {
-                        color: 'white'
-                    }
-                },
-                tickcolor: 'white',
-                tickfont: {
-                    color: 'white'
-                },
-                gridcolor: '#333'
-            },
-            yaxis: {
-                showticklabels: false, 
-                gridcolor: '#333', 
-                zeroline: false 
-            }
-        };
-        
+        }        
 
         Plotly.react('plot', [{
             x: times,
